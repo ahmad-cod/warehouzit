@@ -30,7 +30,7 @@ export default function RootLayout({ children }) {
           after:flex-1 after:border-t after:border-gray-300 after:ml-2">
           or continue with
         </div>
-        <div className="flex items-center justify-center gap-x-6 max-w-md mt-2">
+        <div className="flex items-center justify-center gap-x-6 max-w-sm mt-2">
           <a href="#">
             <Image 
               src='/images/googleIcon.jpg'
