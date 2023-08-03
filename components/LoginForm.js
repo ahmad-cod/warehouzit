@@ -52,7 +52,7 @@ export default function LoginForm () {
               >
                 Password
               </label>
-              <div className="absolute top-4 right-4">
+              <div className="absolute top-4 right-4 -z-20">
                 <Image
                   loading="lazy"
                   src='/images/eyeIcon.svg'

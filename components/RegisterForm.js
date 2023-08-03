@@ -2,6 +2,7 @@ import ErrorMessage from "./ErrorMessage"
 import { useState } from "react";
 import { postFormData } from "@/services/api";
 import { toast } from "react-toastify";
+import Image from "next/image";
 import FloatingLabelInput from "./FloatingLabelInput";
 
 
@@ -127,6 +128,7 @@ export default function RegisterForm () {
           />
 
           {/* Password Input */}
+          <div className="relative">
           <FloatingLabelInput
             type="password"
             id="password"
@@ -135,16 +137,37 @@ export default function RegisterForm () {
             onChange={handleChange}
             error={errors.password}
           />
+          <div className="absolute top-4 right-4 -z-20">
+            <Image
+              loading="lazy"
+              src='/images/eyeIcon.svg'
+              alt="Eye Icon in the password input field"
+              width={20}
+              height={20}
+            />
+          </div>
+          </div>
 
           {/* Confirm Password Input */}
-          <FloatingLabelInput
-            type="password"
-            id="confirmPassword"
-            label="Confirm Password"
-            value={formData.confirmPassword}
-            onChange={handleChange}
-            error={errors.confirmPassword}
-          />
+          <div className="relative">
+            <FloatingLabelInput
+              type="password"
+              id="confirmPassword"
+              label="Confirm Password"
+              value={formData.confirmPassword}
+              onChange={handleChange}
+              error={errors.confirmPassword}
+            />
+            <div className="absolute top-4 right-4 -z-20">
+              <Image
+                loading="lazy"
+                src='/images/eyeIcon.svg'
+                alt="Eye Icon in the password input field"
+                width={20}
+                height={20}
+              />
+            </div>
+          </div>
 
           <div className="flex items-center">
             <input
