@@ -1,26 +1,41 @@
 import ErrorMessage from "./ErrorMessage"
 import { useState } from "react";
 import { postFormData } from "@/services/api";
+import { toast } from "react-toastify";
 
 
 export default function Register () {
-  const [firstName, setFirstName] = useState("")
-  const [lastName, setLastName] = useState("")
+  const [firstName, setFirstName] = useState(" ")
+  const [lastName, setLastName] = useState(" ")
   const [email, setEmail] = useState("");
-  const [phoneNumber, setPhoneNumber] = useState("");
+  const [phoneNumber, setPhoneNumber] = useState(" ");
   const [password, setPassword] = useState("");
   const [passwordConfirm, setPasswordConfirm] = useState("");
   const [error, setError] = useState("");
 
+  const resetPasswordInput = () => {
+    setPassword('')
+    setPasswordConfirm('')
+  }
+  const resetAllInputs = () => {
+    setFirstName('')
+    setLastName('')
+    setEmail('')
+    setPhoneNumber('')
+    resetPasswordInput()
+  }
   const handleSubmit = async (event) => {
     event.preventDefault()
     if(!firstName || !lastName || !email || !phoneNumber || !password || !passwordConfirm) {
+      toast.error('Missing Fields passed')
+      resetPasswordInput()
       return;
     }
 
     if(password !== passwordConfirm) {
       setError('Password is not equal to the confirm password')
-      throw new Error(error)
+      resetPasswordInput()
+      toast.error('Password is not equal to the confirm password')
       return;
     }
 
@@ -36,17 +51,17 @@ export default function Register () {
     }
 
     try {
-      const user = await postFormData(newUser)
+      const response = await postFormData(newUser)
+      resetAllInputs()
+      if(response) {
+        toast.success(response.message)
+      }
       console.log('user', user)
     } catch (error) {
+      resetPasswordInput()
+      toast.error('An error occured')
       throw error
     }
-    setFirstName('')
-    setLastName('')
-    setEmail('')
-    setPhoneNumber('')
-    setPassword('')
-    setPasswordConfirm('')
   }
  
   return (
@@ -104,7 +119,7 @@ export default function Register () {
                 className="block border border-solid px-2.5 pb-2.5 pt-4 w-full text-sm text-gray-900 border-gray-500 focus:border-darkGreen bg-transparent rounded-[4px] border-1 appearance-none
                invalid:border-red-600 focus:outline-none focus:ring-0 invalid:focus:border-red-600 peer"
                 placeholder=" "
-                value={email}
+                // value={email}
                 onChange={({ target }) => setEmail(target.value)}
                 required
               />
