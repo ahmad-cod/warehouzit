@@ -70,7 +70,6 @@ export default function RegisterForm () {
     setErrors(newErrors);
   
     if (Object.keys(newErrors).length === 0) {
-      // Form is valid, perform the submission logic here
       const response = await postFormData(newUser)
       if(response) {
         toast.success(response.message)
@@ -91,47 +90,6 @@ export default function RegisterForm () {
     }
   };
   
-
-  
-  // const handleSubmit = async (event) => {
-  //   event.preventDefault()
-  //   if(!firstName || !lastName || !email || !phoneNumber || !password || !passwordConfirm) {
-  //     toast.error('Missing Fields passed')
-  //     resetPasswordInput()
-  //     return;
-  //   }
-
-  //   if(password !== passwordConfirm) {
-  //     setError('Password is not equal to the confirm password')
-  //     resetPasswordInput()
-  //     toast.error('Password is not equal to the confirm password')
-  //     return;
-  //   }
-
-
-  //   const newUser = {
-  //     username,
-  //     firstName,
-  //     lastName,
-  //     email,
-  //     phoneNumber,
-  //     password
-  //   }
-
-  //   try {
-  //     const response = await postFormData(newUser)
-  //     if(response) {
-  //       toast.success(response.message)
-  //     }
-  //     console.log('user', user)
-  //   } catch (error) {
-  //     resetPasswordInput()
-  //     toast.error('An error occured')
-  //     throw error
-  //   }
-  //   resetAllInputs()
-  // }
- 
   return (
     <form onSubmit={handleSubmit}>
           {/* First Name Input */}
