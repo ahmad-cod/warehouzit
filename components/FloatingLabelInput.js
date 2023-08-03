@@ -12,7 +12,7 @@ const FloatingLabelInput = ({ type = 'text', id, label, value, onChange, error }
     setIsFocused(false);
   };
 
-  const shouldFloatLabel = isFocused || value.trim() !== '';
+  const shouldFloatLabel = isFocused || value.trim() !== '' || value !== '';
 
   return (
     <div className="relative mb-4">
@@ -30,13 +30,13 @@ const FloatingLabelInput = ({ type = 'text', id, label, value, onChange, error }
       />
       <label
         htmlFor={id}
-        className={`absolute text-sm peer-focus:text-base transform scale-75 ${
-          shouldFloatLabel ? 'top-2' : 'top-1/2'
+        className={`absolute text-sm peer-focus:text-base transform ${
+          shouldFloatLabel ? 'top-2 -translate-y-2 left-2' : 'top-1/2'
         } z-10 origin-[0] bg-white px-2 ${
           shouldFloatLabel ? 'peer-focus:px-2' : 'peer-placeholder-shown:px-2'
         } peer-placeholder-shown:scale-100 peer-placeholder-shown:-translate-y-1/2
            peer-placeholder-shown:top-1/2 ${
-             shouldFloatLabel ? 'peer-focus:top-2' : 'peer-placeholder-shown:top-2'
+             shouldFloatLabel ? 'peer-focus:top-2': ''
            } peer-focus:scale-75 peer-focus:-translate-y-4 ${
              shouldFloatLabel ? 'peer-focus:left-4' : 'peer-placeholder-shown:left-2'
            } ${error ? 'text-red-500 translate-y-4 scale-100 top-0 left-4' : 'text-gray-800'}

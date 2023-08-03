@@ -8,14 +8,18 @@ export default function LoginForm () {
             <div className="relative mb-4">
               <input
                 type="email"
-                aria-describedby="outlined_error_help"
+                id="login_email"
                 className="block border border-solid px-2.5 pb-2.5 pt-4 w-full text-sm text-darkGreen/80 border-gray-400 bg-transparent rounded-[4px] border-1 appearance-none
                invalid:border-red-600 focus:outline-none focus:ring-0 invalid:focus:border-red-600 peer"
                 placeholder=" "
               />
               <label
-                htmlFor="outlined_error"
-                className="absolute text-sm peer-focus:text-base text-gray-500 peer-focus:text-darkGreen invalid:text-red-600 duration-300 transform -translate-y-4 scale-75 top-2 z-10 origin-[0] bg-white px-2 peer-focus:px-2 peer-placeholder-shown:scale-100 peer-placeholder-shown:-translate-y-1/2 peer-placeholder-shown:top-1/2 peer-focus:top-2 peer-focus:scale-75 peer-focus:-translate-y-4 left-2 peer-focus:left-4"
+                htmlFor="login_email"
+                className="absolute text-sm peer-focus:text-base text-gray-500 peer-focus:text-darkGreen
+                 invalid:text-red-600 duration-300 transform -translate-y-4 scale-75 top-2 z-10 origin-[0]
+                bg-white px-2 peer-focus:px-2 peer-placeholder-shown:scale-100 peer-placeholder-shown:-translate-y-1/2
+                   peer-placeholder-shown:top-1/2 peer-focus:top-2 peer-focus:scale-75 peer-focus:-translate-y-4 left-2
+                    peer-focus:left-4"
               >
                 Email Address
               </label>
