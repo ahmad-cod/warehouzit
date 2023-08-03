@@ -10,7 +10,7 @@ export default function SocialAuthButtons () {
         <div className="flex items-center justify-center gap-1 gap-x-7 max-w-sm mt-4">
           <a 
             href="#"
-            className="p-2 bg-subdued rounded-lg"
+            className="p-2.5 bg-gradient-to-b from-[#E8F8EC] to-[#FEF0C8] rounded-lg"
           >
           <svg xmlns="http://www.w3.org/2000/svg" width="25" height="24" viewBox="0 0 25 24" fill="none">
             <path fill-rule="evenodd" clip-rule="evenodd" d="M5.68204 11.996C5.68204 11.2176 5.81131 10.4714 6.04204 9.77148L2.00349 6.6875C1.2164 8.28559 0.772949 10.0863 0.772949 11.996C0.772949 13.904 1.21586 15.7036 2.00186 17.3006L6.03822 14.2106C5.80968 13.514 5.68204 12.7705 5.68204 11.996Z" fill="#FBBC05"/>
@@ -21,7 +21,7 @@ export default function SocialAuthButtons () {
           </a>
           <a 
             href="#"
-            className="p-2 bg-subdued rounded-lg"
+            className="p-2.5 bg-gradient-to-b from-[#E8F8EC] to-[#FEF0C8] rounded-lg"
           >
           <svg xmlns="http://www.w3.org/2000/svg" width="25" height="24" viewBox="0 0 25 24" fill="none">
             <path fill-rule="evenodd" clip-rule="evenodd" d="M13.0462 24H1.55167C0.819887 24 0.227051 23.4068 0.227051 22.6753V1.32461C0.227051 0.592927 0.81998 0 1.55167 0H22.9025C23.634 0 24.2271 0.592927 24.2271 1.32461V22.6753C24.2271 23.4069 23.6339 24 22.9025 24H16.7867V14.7059H19.9063L20.3734 11.0838H16.7867V8.77132C16.7867 7.72265 17.0779 7.008 18.5817 7.008L20.4997 7.00716V3.76755C20.168 3.72341 19.0294 3.62479 17.7048 3.62479C14.9395 3.62479 13.0462 5.31276 13.0462 8.41261V11.0838H9.91861V14.7059H13.0462V24Z" fill="#4460A0"/>

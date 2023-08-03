@@ -1,7 +1,7 @@
 "use client";
 import ErrorMessage from "@/components/ErrorMessage";
-import Login from "@/components/Login";
-import Register from "@/components/Register";
+import Login from "@/components/LoginForm";
+import Register from "@/components/RegisterForm";
 import Image from "next/image";
 import { useState } from "react";
 

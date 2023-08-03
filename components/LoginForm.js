@@ -1,8 +1,8 @@
 import ErrorMessage from "./ErrorMessage"
 
-export default function Login () {
+export default function LoginForm () {
   return (
-    <form>
+    <form className="shadow">
           {/* Email Address Input */}
           <div>
             <div className="relative mb-4">
@@ -19,7 +19,6 @@ export default function Login () {
               >
                 Email Address
               </label>
-              <ErrorMessage message='enter your email address' />
             </div>
           </div>
 
@@ -39,7 +38,6 @@ export default function Login () {
               >
                 Password
               </label>
-              <ErrorMessage message='enter your password' />
             </div>
           </div>
 
@@ -65,6 +63,7 @@ export default function Login () {
             <button
               type="submit"
               className="bg-darkGreen text-white w-full py-3 rounded-[4px]"
+              disabled
             >
               Log in
             </button>
