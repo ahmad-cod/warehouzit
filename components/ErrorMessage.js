@@ -3,7 +3,7 @@ import Image from "next/image"
 export default function ErrorMessage({ message }) {
   return (
     <p
-      className="flex mt-2 text-sm text-red-600"
+      className="flex mt-2 mb-2 text-sm text-red-600"
     >
       <Image 
         loading="lazy"
