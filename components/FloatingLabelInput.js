@@ -19,7 +19,7 @@ const FloatingLabelInput = ({ type = 'text', id, label, value, onChange, error }
       <input
         type={type}
         id={id}
-        className={`appearance-none border px-2.5 py-2.5 w-full text-sm text-gray-900 focus:shadow-md focus:border-darkGreen bg-transparent rounded-[4px] border-1
+        className={`appearance-none border px-2.5 pb-2.5 pt-4 w-full text-sm text-gray-900 focus:shadow-md focus:border-darkGreen bg-transparent rounded-[4px] border-1
            focus:outline-none focus:ring-0 ${error ? 'border-red-500' : 'border-gray-400'} peer`}
         placeholder=" "
         name={id}
