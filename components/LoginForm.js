@@ -1,3 +1,4 @@
+import Image from "next/image"
 import ErrorMessage from "./ErrorMessage"
 
 export default function LoginForm () {
@@ -23,6 +24,15 @@ export default function LoginForm () {
               >
                 Email Address
               </label>
+              <div className="absolute top-4 right-4">
+                <Image
+                  loading="lazy"
+                  src='/images/emailUserIcon.svg'
+                  alt="Icon in the email input field"
+                  width={20}
+                  height={20}
+                />
+              </div>
             </div>
           </div>
 
@@ -42,6 +52,15 @@ export default function LoginForm () {
               >
                 Password
               </label>
+              <div className="absolute top-4 right-4">
+                <Image
+                  loading="lazy"
+                  src='/images/eyeIcon.svg'
+                  alt="Eye Icon in the password input field"
+                  width={20}
+                  height={20}
+                />
+              </div>
             </div>
           </div>
 
