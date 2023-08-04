@@ -36,7 +36,7 @@ const FloatingLabelInput = ({ type = 'text', id, label, value, onChange, error }
         } z-10 origin-[0] bg-white px-2 ${
           shouldFloatLabel ? 'peer-focus:px-2' : 'peer-placeholder-shown:px-2'
         } peer-placeholder-shown:scale-100 peer-placeholder-shown:-translate-y-1/2
-           peer-placeholder-shown:top-1/2 ${
+            ${
              shouldFloatLabel ? 'peer-focus:top-[2px]' : ''
            } peer-focus:scale-75 peer-focus:-translate-y-4 ${
              shouldFloatLabel ? 'peer-focus:left-4' : 'peer-placeholder-shown:left-2'
