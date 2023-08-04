@@ -25,6 +25,13 @@ export default function RegisterForm () {
       ...prevData,
       [name]: value
     }))
+
+    if (value.trim() !== '') {
+      setErrors((prevErrors) => ({
+        ...prevErrors,
+        [name]: null
+      }))
+    }
   }
 
   const handleSubmit = async (e) => {
